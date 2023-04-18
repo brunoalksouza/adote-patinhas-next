@@ -1,1 +1,0 @@
-# adote-patinhas-next

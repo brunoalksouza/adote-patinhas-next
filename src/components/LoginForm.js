@@ -34,7 +34,7 @@ export default function LoginForm() {
     <div className="flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6">
       <div className="flex-1">
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-center text-gray-700 dark:text-white">
+          <h2 className="text-4xl font-bold text-center text-white dark:text-white">
             Entrar
           </h2>
           <ButtonGoogle 

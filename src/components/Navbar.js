@@ -1,11 +1,14 @@
+import React from 'react';
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Modal from "./Modal";
 import {
   ChevronDownIcon,
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+
 import { useRouter } from "next/router";
 
 export default function Header() {
@@ -13,10 +16,20 @@ export default function Header() {
 
   const router = useRouter();
 
+  const apoiaSeModal = {
+    title: "Apoie nosso projeto no site apoia-se",
+    description:
+      "Nos ajude com qualquer quantia para conseguirmos continuar com esse projeto e garantir um lar para mais bichinhos!",
+    cancelButton: "Quero ajudar encontrar mais lares para bichinhos",
+    nameButton: "NOS APOIE",
+  };
+
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="text-[#5A3938] bg-[#f2f1eb]">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between  lg:px-8"
+        className="mx-auto flex flex-row max-w-7xl items-center justify-between lg:px-8 px-4"
         aria-label="Global"
       >
         <div className="flex lg:flex-1 ">
@@ -27,14 +40,14 @@ export default function Header() {
             <img
               className="w-32"
               src="https://i.pinimg.com/originals/63/b9/c2/63b9c20b506b655b7f6b52d4fdeab06e.png"
-              alt="Fabio Souza"
+              alt="Adote Patinhas"
             />
           </button>
         </div>
-        <div className="flex lg:hidden pb-8">
+        <div className="flex lg:hidden pb-8 items-center justify-items-center">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className=" inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 justify-items-center"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -45,36 +58,40 @@ export default function Header() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <button
             onClick={() => router.push("/")}
-            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50 text-[#5A3938]"
+            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7   text-[#5A3938]"
           >
             INÍCIO
           </button>
           <button
             onClick={() => router.push("/")}
-            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50 text-[#5A3938]"
+            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  text-[#5A3938]"
           >
             DOE UM BICHINHO
           </button>
           <button
             onClick={() => router.push("/")}
             href="https://www.d20loja.com.br/"
-            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 text-[#5A3938]"
+            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-[#5A3938]"
           >
             PERFIL
           </button>
           <button
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/interests")}
             href="https://www.d20loja.com.br/"
-            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 text-[#5A3938]"
+            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-[#5A3938]"
           >
             INTERESSES
           </button>
           <button
-            onClick={() => router.push("/")}
+            onClick={() => setOpen(true)}
             href="https://www.d20loja.com.br/"
-            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-[#5A3938]"
           >
-            NOS APOIE
+            {typeof window === "undefined" ? (
+              <Modal {...apoiaSeModal} suppressHydrationWarning={true} />
+            ) : (
+              <Modal {...apoiaSeModal} />
+            )}
           </button>
         </Popover.Group>
       </nav>

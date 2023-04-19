@@ -5,11 +5,11 @@ export default function Footer() {
 
   return (
     <>
-      <div className=" flex row flex-wrap justify-around text-zinc-200 bg-[#516953] py-10">
+      <div className=" flex row flex-wrap sm:px-22 lg:px-48 px-8	text-zinc-200 bg-[#516953] py-10">
         <div className="flex flex-col mx-auto mb-4 w-32 items-start">
           <h3 className="text-2xl mb-4">Sobre</h3>
-          <button onClick={() => router.push("/")}>Privacidade</button>
-          <button onClick={() => router.push("/")}>Responsabilidade</button>
+          <button onClick={() => router.push("/")}>Nós</button>
+          <button onClick={() => router.push("/")}>Senac</button>
         </div>
         <div className="flex flex-col mx-auto mb-4 w-32 items-start">
           <h3 className="text-2xl mb-4">Políticas</h3>

@@ -33,7 +33,7 @@ const products = [
     race: "bulldog frances",
     vacinade: "sim",
   }, {
-    id: 1,
+    id: 4,
     name: "Mayllon",
     href: "#",
     imageSrc:
@@ -44,7 +44,7 @@ const products = [
     vacinade: "sim",
   },
   {
-    id: 2,
+    id: 5,
     name: "Bruno",
     href: "#",
     imageSrc:
@@ -55,7 +55,7 @@ const products = [
     vacinade: "sim",
   },
   {
-    id: 3,
+    id: 6,
     name: "Talles",
     href: "#",
     imageSrc:
@@ -65,7 +65,7 @@ const products = [
     race: "bulldog frances",
     vacinade: "sim",
   }, {
-    id: 1,
+    id: 7,
     name: "Mayllon",
     href: "#",
     imageSrc:
@@ -76,7 +76,7 @@ const products = [
     vacinade: "sim",
   },
   {
-    id: 2,
+    id: 8,
     name: "Bruno",
     href: "#",
     imageSrc:
@@ -87,7 +87,7 @@ const products = [
     vacinade: "sim",
   },
   {
-    id: 3,
+    id: 9,
     name: "Talles",
     href: "#",
     imageSrc:
@@ -134,7 +134,7 @@ export default function Card() {
                      Distancia: {product.distance}
                 </p>
               </div>
-              <Button className="w-full"/>
+              {/* <Button className="w-full"/> */}
             </div>
             
           ))}

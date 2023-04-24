@@ -10,6 +10,8 @@ const products = [
     distance: "10km",
     race: "rajado",
     vacinade: "sim",
+    age: "2 anos",
+    castrated: "sim",
   },
   {
     id: 2,
@@ -21,6 +23,8 @@ const products = [
     distance: "10km",
     race: "caramelo",
     vacinade: "sim",
+    age: "2 anos",
+    castrated: "sim",
   },
   {
     id: 3,
@@ -32,7 +36,10 @@ const products = [
     distance: "22km",
     race: "bulldog frances",
     vacinade: "sim",
-  }, {
+    age: "2 anos",
+    castrated: "sim",
+  },
+  {
     id: 4,
     name: "Mayllon",
     href: "#",
@@ -42,6 +49,8 @@ const products = [
     distance: "10km",
     race: "rajado",
     vacinade: "sim",
+    age: "2 anos",
+    castrated: "sim",
   },
   {
     id: 5,
@@ -53,6 +62,8 @@ const products = [
     distance: "10km",
     race: "caramelo",
     vacinade: "sim",
+    age: "2 anos",
+    castrated: "sim",
   },
   {
     id: 6,
@@ -64,7 +75,10 @@ const products = [
     distance: "22km",
     race: "bulldog frances",
     vacinade: "sim",
-  }, {
+    age: "2 anos",
+    castrated: "sim",
+  },
+  {
     id: 7,
     name: "Mayllon",
     href: "#",
@@ -74,6 +88,8 @@ const products = [
     distance: "10km",
     race: "rajado",
     vacinade: "sim",
+    age: "2 anos",
+    castrated: "sim",
   },
   {
     id: 8,
@@ -85,6 +101,8 @@ const products = [
     distance: "10km",
     race: "caramelo",
     vacinade: "sim",
+    age: "2 anos",
+    castrated: "sim",
   },
   {
     id: 9,
@@ -96,6 +114,8 @@ const products = [
     distance: "22km",
     race: "bulldog frances",
     vacinade: "sim",
+    age: "2 anos",
+    castrated: "sim",
   },
 ];
 
@@ -116,29 +136,36 @@ export default function Card() {
                   className="h-80 w-full rounded-t object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
-              <div className="mt-4 p-2 flex justify-between">
+              <div className="mt-4 p-4 flex justify-between">
                 <div>
                   <h3 className="text-sm font-medium text-[#5A3938]">
                     <a href={product.href}>
-                      <span aria-hidden="true" className="absolute inset-0" />Nome: {product.name}
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      Nome: {product.name}
                     </a>
                   </h3>
                   <p className="mt-1 text-sm font-medium text-[#5A3938]">
                     Raça: {product.race}
                   </p>
-                  <p className="mt-1 text-sm font-medium text-[#5A3938]"> 
-                     Vacinado: {product.vacinade}
+                  <p className="mt-1 text-sm font-medium text-[#5A3938]">
+                    Vacinado: {product.vacinade}
                   </p>
                 </div>
-                <p className="text-sm font-medium text-[#5A3938]"> 
-                     Distancia: {product.distance}
-                </p>
+                <div>
+                  <p className="mt-1 text-sm font-medium text-[#5A3938]">
+                    Distancia: {product.distance}
+                  </p>
+                  <p className="mt-1 text-sm font-medium text-[#5A3938]">
+                    Idade: {product.age}
+                  </p>{" "}
+                  <p className="mt-1 text-sm font-medium text-[#5A3938]">
+                    Castrado: {product.castrated}
+                  </p>
+                </div>
               </div>
-              {/* <Button className="w-full"/> */}
+              <Button />
             </div>
-            
           ))}
-          
         </div>
       </div>
     </div>

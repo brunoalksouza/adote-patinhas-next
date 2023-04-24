@@ -1,6 +1,7 @@
-import Button from "./Botao";
+import { useState } from "react";
 
-export default function Card({animals}) {
+export default function AnimalsUser({ animals }) {
+  const [changeButton, setChangeButton] = useState(true);
   return (
     <div className="bg-[#A5C282]">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -44,7 +45,17 @@ export default function Card({animals}) {
                   </p>
                 </div>
               </div>
-              <Button />
+              <button
+                className="group rounded-b h-12 uppercase font-bold w-full text-lg text-white relative overflow-hidden"
+                onClick={() => {
+                  setChangeButton(!changeButton);
+                }}
+                style={{
+                  backgroundColor: changeButton ? "#516953" : "#5A3938",
+                }}
+              >
+                {changeButton ? "Tenho interesse" : "Remover"}
+              </button>
             </div>
           ))}
         </div>

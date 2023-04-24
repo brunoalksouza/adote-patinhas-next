@@ -1,16 +1,7 @@
-const user = [
-  {
-    id: 1,
-    name: "Lurdes Aparecida da Silva",
-    email: "lurdinha77@gmail.com",
-    contact: "(99) 9 9999-7777",
-    imageSrc:
-      "https://media.gazetadopovo.com.br/viver-bem/2016/09/cat-e1474480323245-fc48cf70.jpg",
-  },
-];
-export default function CardUser() {
-  return (
-    <div className="h-full">
+import React from "react";
+
+export default function CardUser({user}) {
+  return (    
       <div className=" h-full">
         {user.map((user) => (
           <div
@@ -28,7 +19,7 @@ export default function CardUser() {
               <div>
                 <h3 className="text-sm font-medium text-[#5A3938]">
                   <a href={user.href}>
-                    <span aria-hidden="true" className="absolute inset-0" />
+                    <span aria-hidden="true" className="absolute" />
                     Nome: {user.name}
                   </a>
                 </h3>
@@ -50,7 +41,6 @@ export default function CardUser() {
             </div>
           </div>
         ))}
-      </div>
-    </div>
+      </div>    
   );
 }

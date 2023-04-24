@@ -1,6 +1,18 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Card from "@/components/Card";
+import CardUser from "@/components/CardUser";
+import AnimalsUser from "@/components/AnimalsUser";
+
+const user = [
+  {
+    id: 1,
+    name: "Lurdes Aparecida da Silva",
+    email: "lurdinha77@gmail.com",
+    contact: "(99) 9 9999-7777",
+    imageSrc:
+      "https://media.gazetadopovo.com.br/viver-bem/2016/09/cat-e1474480323245-fc48cf70.jpg",
+  },
+];
 
 const animals = [
   {
@@ -122,11 +134,20 @@ const animals = [
   },
 ];
 
-export default function Interests() {
+export default function Perfil() {
   return (
     <>
       <Navbar />
-      <Card animals={animals}/>
+      <div className="bg-[#A5C282]">
+        <div className="bg-[#A5C282] mx-auto flex max-w-7xl justify-between flex-wrap flex-1">
+            <div className="float-left">
+                <CardUser user={user} />
+            </div>
+          
+
+          <AnimalsUser animals={animals} />
+        </div>
+      </div>
       <Footer />
     </>
   );

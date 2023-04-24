@@ -4,8 +4,8 @@ export default function Footer() {
   const router = useRouter();
 
   return (
-    <>
-      <div className=" flex row flex-wrap sm:px-22 lg:px-48 px-8	text-zinc-200 bg-[#516953] py-10">
+    <div className="bg-[#516953] w-full py-1">
+      <div className="flex-wrap text-zinc-200 mx-auto flex max-w-7xl  justify-between p-6 lg:px-8">
         <div className="flex flex-col mx-auto mb-4 w-32 items-start">
           <h3 className="text-2xl mb-4">Sobre</h3>
           <button onClick={() => router.push("/")}>Nós</button>
@@ -27,6 +27,6 @@ export default function Footer() {
           <button onClick={() => router.push("/")}>Tweeter</button>
         </div>
       </div>
-    </>
+    </div >
   );
 }

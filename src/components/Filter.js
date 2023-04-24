@@ -1,7 +1,7 @@
 export default function Filter() {
   return (
     <nav id="header" className="w-full py-1 bg-[#516953]">
-      <div className="">
+      <div className="flex-wrap text-zinc-200 mx-auto flex max-w-7xl  justify-between p-6 lg:px-8">
         <div
           className="px-0 md:mx-auto md:flex w-full order-3 text-gray-50"
           id="menu"

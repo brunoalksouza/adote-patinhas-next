@@ -92,7 +92,7 @@ const animals = [
     vacinade: "sim",
     age: "2 anos",
     castrated: "sim",
-  },
+  },    
   {
     id: 7,
     name: "Mayllon",
@@ -139,12 +139,8 @@ export default function Perfil() {
     <>
       <Navbar />
       <div className="bg-[#A5C282]">
-        <div className="bg-[#A5C282] mx-auto flex max-w-7xl justify-between flex-wrap flex-1">
-            <div className="float-left">
-                <CardUser user={user} />
-            </div>
-          
-
+        <div className="bg-[#A5C282] items-center mx-auto flex max-w-7xl flex-col sm:flex-row  sm:justify-between ">
+          <CardUser user={user} />
           <AnimalsUser animals={animals} />
         </div>
       </div>

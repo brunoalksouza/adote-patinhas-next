@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -30,7 +30,7 @@ export default function Header() {
         <div className="flex lg:flex-1 ">
           <button
             className="-m-1.5 p-1.5 flex flex-col lg:flex-row lg:items-center "
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/home")}
           >
             <img
               className="w-32"
@@ -39,20 +39,20 @@ export default function Header() {
             />
           </button>
         </div>
-        <div className="flex lg:hidden pb-8 items-center justify-items-center">
+        <div className="flex lg:hidden  items-center ">
           <button
             type="button"
-            className=" inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 justify-items-center"
+            className=" flex items-center  rounded-md text-gray-700 "
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-8 w-8" aria-hidden="true" />
           </button>
         </div>
 
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <button
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/home")}
             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7   text-[#5A3938]"
           >
             INÍCIO
@@ -64,7 +64,7 @@ export default function Header() {
             DOE UM BICHINHO
           </button>
           <button
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/perfil")}
             href="https://www.d20loja.com.br/"
             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-[#5A3938]"
           >
@@ -79,7 +79,7 @@ export default function Header() {
           </button>
           <button
             onClick={() => setOpen(true)}
-            href="https://www.d20loja.com.br/"
+            href=""
             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-[#5A3938]"
           >
             {typeof window === "undefined" ? (
@@ -105,14 +105,14 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon className="h-8 w-8" aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <button
-                  onClick={() => router.push("/")}
+                  onClick={() => router.push("/home")}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50 text-[#5A3938]"
                 >
                   INÍCIO
@@ -124,25 +124,29 @@ export default function Header() {
                   DOE UM BICHINHO
                 </button>
                 <button
-                  onClick={() => router.push("/")}
+                  onClick={() => router.push("/perfil")}
                   href="https://www.d20loja.com.br/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 text-[#5A3938]"
                 >
                   PERFIL
                 </button>
                 <button
-                  onClick={() => router.push("/")}
+                  onClick={() => router.push("/interests")}
                   href="https://www.d20loja.com.br/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 text-[#5A3938]"
                 >
                   INTERESSES
                 </button>
                 <button
-                  onClick={() => router.push("/")}
-                  href="https://www.d20loja.com.br/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  onClick={() => setOpen(true)}
+                  href=""
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-[#5A3938]"
                 >
-                  NOS APOIE
+                  {typeof window === "undefined" ? (
+                    <Modal {...apoiaSeModal} suppressHydrationWarning={true} />
+                  ) : (
+                    <Modal {...apoiaSeModal} />
+                  )}
                 </button>
               </div>
             </div>

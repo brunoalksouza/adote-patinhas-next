@@ -3,7 +3,7 @@ import Link from "next/link";
 function ButtonGoogle() {
   return (
     <Link
-      href="/test"
+      href="/home"
       className="w-full bg-white active:bg-blueGray-50 mt-10 text-cyan-600 uppercase text-center py-4 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg  hover:border-slate-400 font-bold hover:shadow transition duration-150"
     >
       <Image
@@ -21,7 +21,7 @@ function ButtonGoogle() {
 function ButtonFacebook() {
   return (
     <Link
-      href="/test"
+      href="/home"
       className="w-full bg-white active:bg-blueGray-50 mt-5 text-cyan-600 uppercase text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg  hover:border-slate-400 font-bold hover:shadow transition duration-150"
     >
       <Image

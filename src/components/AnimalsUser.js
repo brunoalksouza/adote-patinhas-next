@@ -1,21 +1,24 @@
 import { useState } from "react";
+import Button from "./Botao";
 
 export default function AnimalsUser({ animals }) {
-  const [changeButton, setChangeButton] = useState(true);
   return (
     <div className="bg-[#A5C282]">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+      <div className="bg-[#F2F1EB] text-center font-medium my-2">
+        <p className="text-[#5A3938]">Animais Cadastrados</p>
+      </div>
+      <div className="mx-auto max-w-2xl">
+        <div className="flex flex-row justify-items-start  flex-wrap justify-around sd:justify-around xl:justify-between xl:items-center overflow-y-auto h-[37rem]	">
           {animals.map((product) => (
             <div
               key={product.id}
-              className="group relative bg-[#F2F1EB] rounded min-h-300"
+              className="group relative bg-[#F2F1EB] rounded h-72 w-52 flex flex-col justify-between my-3"
             >
-              <div className="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-t bg-gray-200 flex justify-center lg:aspect-none group-hover:opacity-75 lg:h-80">
+              <div className="min-h-44  overflow-hidden rounded-t bg-gray-200 flex justify-center lg:aspect-none group-hover:opacity-75 lg:h-44">
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
-                  className="h-80 w-full rounded-t object-cover object-center lg:h-full lg:w-full"
+                  className="h-80 w-full rounded-t object-cover object-center "
                 />
               </div>
               <div className="mt-4 p-4 flex justify-between">
@@ -25,37 +28,10 @@ export default function AnimalsUser({ animals }) {
                       <span aria-hidden="true" className="absolute inset-0" />
                       Nome: {product.name}
                     </a>
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-[#5A3938]">
-                    Raça: {product.race}
-                  </p>
-                  <p className="mt-1 text-sm font-medium text-[#5A3938]">
-                    Vacinado: {product.vacinade}
-                  </p>
-                </div>
-                <div>
-                  <p className="mt-1 text-sm font-medium text-[#5A3938]">
-                    Distancia: {product.distance}
-                  </p>
-                  <p className="mt-1 text-sm font-medium text-[#5A3938]">
-                    Idade: {product.age}
-                  </p>{" "}
-                  <p className="mt-1 text-sm font-medium text-[#5A3938]">
-                    Castrado: {product.castrated}
-                  </p>
-                </div>
+                  </h3>                  
+                </div>                
               </div>
-              <button
-                className="group rounded-b h-12 uppercase font-bold w-full text-lg text-white relative overflow-hidden"
-                onClick={() => {
-                  setChangeButton(!changeButton);
-                }}
-                style={{
-                  backgroundColor: changeButton ? "#516953" : "#5A3938",
-                }}
-              >
-                {changeButton ? "Tenho interesse" : "Remover"}
-              </button>
+              <Button close="remover" open="retornar" corClose="#5A3938" corOpen="#516953"/> 
             </div>
           ))}
         </div>

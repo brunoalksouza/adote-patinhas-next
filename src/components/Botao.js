@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export default function Button() {
+
+export default function Button({close, open, corClose, corOpen}) {
   const [changeButton, setChangeButton] = useState(true);
   return (
     <button
@@ -8,9 +9,9 @@ export default function Button() {
       onClick={() => {
         setChangeButton(!changeButton);
       }}
-      style={{ backgroundColor: changeButton ? "#516953" : "#5A3938" }}
+      style={{ backgroundColor: changeButton ? `${corClose}` : `${corOpen}` }}
     >
-      {changeButton ? "Tenho interesse" : "Remover"}
+      {changeButton ? `${close}` : `${open}`}
     </button>
   );
 }

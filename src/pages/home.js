@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Card from "@/components/Card";
+import Filter from "@/components/Filter";
 
-const favoriteAnimals = [
+const registeredAnimals = [
   {
     id: 1,
     name: "Mayllon",
@@ -126,7 +127,8 @@ export default function Interests() {
   return (
     <>
       <Navbar />
-      <Card animals={favoriteAnimals} close="remover interesse" open="voltar interesse" corClose="#5A3938" corOpen="#516953"/>
+      <Filter />
+      <Card animals={registeredAnimals} close="adicionar interesse" open="remover interesse" corClose="#516953" corOpen="#5A3938"/>
       <Footer />
     </>
   );

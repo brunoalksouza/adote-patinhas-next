@@ -1,6 +1,6 @@
 import Button from "./Botao";
 
-export default function Card({animals}) {
+export default function Card({animals, close, open, corClose, corOpen}) {
   return (
     <div className="bg-[#A5C282]">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -44,7 +44,7 @@ export default function Card({animals}) {
                   </p>
                 </div>
               </div>
-              <Button />
+              <Button close={close} open={open} corClose={corClose} corOpen={corOpen}/>
             </div>
           ))}
         </div>

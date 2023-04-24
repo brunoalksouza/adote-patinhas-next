@@ -1,4 +1,5 @@
 import LoginForm from "@/components/LoginForm";
+import Image from "next/image";
 
 export default function Login() {
   return (
@@ -12,14 +13,19 @@ export default function Login() {
         >
           <div className="flex justify-center items-center text-center h-full px-20 bg-gray-900 bg-opacity-30 ">
             <div className="bg-neutral-900 bg-opacity-60 p-10 rounded-lg">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className="mx-auto"
                 src="https://i.pinimg.com/originals/da/ec/5d/daec5d092f7d91a04f272d84a8e13921.png"
                 alt="Imagem externa"
               />
-
-              <h1 className="text-2xl uppercase text-white font-normal">A rede social favorita para<br/> a adoção de pets.</h1>
-              <h1 className="text-2xl uppercase text-white font-normal mt-5">Não compre, adote!</h1>
+              <h1 className="text-2xl uppercase text-white font-normal">
+                A rede social favorita para
+                <br /> a adoção de pets.
+              </h1>
+              <h1 className="text-2xl uppercase text-white font-normal mt-5">
+                Não compre, adote!
+              </h1>
             </div>
           </div>
         </div>

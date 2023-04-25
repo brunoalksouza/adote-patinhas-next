@@ -58,7 +58,7 @@ export default function Header() {
             INÍCIO
           </button>
           <button
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/doeUmBichinho")}
             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  text-[#5A3938]"
           >
             DOE UM BICHINHO
@@ -71,7 +71,7 @@ export default function Header() {
             PERFIL
           </button>
           <button
-            onClick={() => router.push("/interests")}
+            onClick={() => router.push("/interesses")}
             href="https://www.d20loja.com.br/"
             className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-[#5A3938]"
           >
@@ -118,7 +118,7 @@ export default function Header() {
                   INÍCIO
                 </button>
                 <button
-                  onClick={() => router.push("/")}
+                  onClick={() => router.push("/doeUmBichinho")}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7  hover:bg-gray-50 text-[#5A3938]"
                 >
                   DOE UM BICHINHO
@@ -131,7 +131,7 @@ export default function Header() {
                   PERFIL
                 </button>
                 <button
-                  onClick={() => router.push("/interests")}
+                  onClick={() => router.push("/interesses")}
                   href="https://www.d20loja.com.br/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 text-[#5A3938]"
                 >

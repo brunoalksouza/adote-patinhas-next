@@ -12,7 +12,7 @@ export default function AnimalsUser({ animals }) {
           {animals.map((product) => (
             <div
               key={product.id}
-              className="group relative bg-[#F2F1EB] rounded h-72 w-52 flex flex-col justify-between my-3"
+              className="group relative bg-[#F2F1EB] rounded h-72 w-80 flex flex-col justify-between my-3"
             >
               <div className="min-h-44  overflow-hidden rounded-t bg-gray-200 flex justify-center lg:aspect-none group-hover:opacity-75 lg:h-44">
                 <img

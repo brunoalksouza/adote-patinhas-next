@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Card from "@/components/Card";
+import LabelPage from "@/components/LabelPage";
 
 const favoriteAnimals = [
   {
@@ -122,11 +123,14 @@ const favoriteAnimals = [
   },
 ];
 
-export default function Interests() {
+export default function Interesses() {
   return (
     <>
       <Navbar />
+      <div className="bg-[#A5C282] pt-4">
+        <LabelPage titlePage="Interesses" />
       <Card animals={favoriteAnimals} close="remover interesse" open="voltar interesse" corClose="#5A3938" corOpen="#516953"/>
+      </div>
       <Footer />
     </>
   );

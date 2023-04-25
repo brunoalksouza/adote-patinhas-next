@@ -1,10 +1,27 @@
 import { Inter } from "next/font/google";
+import { Menu } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { Transition } from "@headlessui/react";
 
 export default function RegisterCard() {
   return (
-      <div className="m-28 bg-white ">
+    <div className="m-44">
+      <div className="bg-white ">
         <form className="p-20">
-          <div class="relative z-0 w-full mb-6 group">
+          <label class="block">
+            <span class="sr-only">Choose profile photo</span>
+            <input
+              type="file"
+              class="block w-full text-sm text-slate-500
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-full file:border-0
+      file:text-sm file:font-semibold
+      file:bg-violet-50 file:text-violet-700
+      hover:file:bg-violet-100
+    "
+            />
+          </label>
+          <div class="relative mt-6 z-0 w-full mb-6 group">
             <input
               type="email"
               name="floating_email"
@@ -121,6 +138,7 @@ export default function RegisterCard() {
               </label>
             </div>
           </div>
+
           <button
             type="submit"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -129,5 +147,6 @@ export default function RegisterCard() {
           </button>
         </form>
       </div>
+    </div>
   );
 }

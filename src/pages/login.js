@@ -14,7 +14,7 @@ export default function Login() {
             <div className="bg-neutral-900 bg-opacity-60 lg:p-10 rounded-lg">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                className="my-5 px-5 mx-auto lg:my-0"
+                className="my-5 px-5 mx-auto lg:my-0 lg:mb-4"
                 src="https://i.pinimg.com/originals/da/ec/5d/daec5d092f7d91a04f272d84a8e13921.png"
                 alt="Imagem externa"
               />

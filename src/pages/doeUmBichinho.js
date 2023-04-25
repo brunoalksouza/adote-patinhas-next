@@ -8,7 +8,7 @@ export default function DoeUmBichinho() {
   return (
     <div>
       <Navbar />
-      <div className="bg-[#A5C282] pt-4">
+      <div className="bg-[#A5C282] py-4 ">
         <LabelPage titlePage="Doe um bichinho " />
         <RegisterCard />
       </div>

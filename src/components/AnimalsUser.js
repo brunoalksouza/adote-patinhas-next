@@ -8,7 +8,7 @@ export default function AnimalsUser({ animals }) {
         <p className="text-[#5A3938]">Animais Cadastrados</p>
       </div>
       <div className="mx-auto max-w-2xl">
-        <div className="flex flex-row justify-items-start  flex-wrap justify-around sd:justify-around xl:justify-between xl:items-center overflow-y-auto h-[37rem]	">
+        <div className="flex flex-row justify-items-start flex-wrap justify-around sd:justify-around xl:justify-between xl:items-center overflow-y-scroll h-[37rem]">
           {animals.map((product) => (
             <div
               key={product.id}
@@ -25,7 +25,7 @@ export default function AnimalsUser({ animals }) {
                 <div>
                   <h3 className="text-sm font-medium text-[#5A3938]">
                     <a href={product.href}>
-                      <span aria-hidden="true" className="absolute inset-0" />
+                      <span aria-hidden="true" className="absolute " />
                       Nome: {product.name}
                     </a>
                   </h3>                  

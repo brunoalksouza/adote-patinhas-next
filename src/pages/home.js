@@ -124,7 +124,7 @@ const registeredAnimals = [
   },
 ];
 
-export default function Interests() {
+export default function Home() {
   return (
     <>
       <Navbar />

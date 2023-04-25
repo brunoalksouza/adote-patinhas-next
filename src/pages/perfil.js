@@ -13,7 +13,6 @@ const user = [
       "https://media.gazetadopovo.com.br/viver-bem/2016/09/cat-e1474480323245-fc48cf70.jpg",
   },
 ];
-
 const animals = [
   {
     id: 1,

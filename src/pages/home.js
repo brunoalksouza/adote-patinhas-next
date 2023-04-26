@@ -130,7 +130,7 @@ export default function Home() {
       <Navbar />
       <Filter />
       <div className="bg-[#A5C282] pt-4">
-        <LabelPage titlePage="Principal" />
+        <LabelPage titlePage="PRINCIPAL" />
         <Card
           animals={registeredAnimals}
           close="adicionar interesse"

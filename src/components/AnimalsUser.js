@@ -5,7 +5,7 @@ export default function AnimalsUser({ animals }) {
   return (
     <div className="bg-[#A5C282]">
       <div className="bg-[#F2F1EB] text-center font-medium my-2">
-        <p className="text-[#5A3938]">Animais Cadastrados</p>
+        <p className="text-[#5A3938]">ANIMAIS CADASTRADOS</p>
       </div>
       <div className="mx-auto max-w-2xl">
         <div className="flex flex-row justify-items-start flex-wrap justify-around sd:justify-around xl:justify-between xl:items-center overflow-y-scroll h-[37rem]">

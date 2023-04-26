@@ -128,7 +128,7 @@ export default function Interesses() {
     <>
       <Navbar />
       <div className="bg-[#A5C282] pt-4">
-        <LabelPage titlePage="Interesses" />
+        <LabelPage titlePage="INTERESSES" />
       <Card animals={favoriteAnimals} close="remover interesse" open="voltar interesse" corClose="#5A3938" corOpen="#516953"/>
       </div>
       <Footer />

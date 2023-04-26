@@ -9,7 +9,7 @@ export default function DoeUmBichinho() {
     <div>
       <Navbar />
       <div className="bg-[#A5C282] py-4 ">
-        <LabelPage titlePage="Doe um bichinho " />
+        <LabelPage titlePage="DOE UM BICHINHO " />
         <RegisterCard />
       </div>
       <Footer />

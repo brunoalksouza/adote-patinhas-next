@@ -27,6 +27,6 @@ export default function Footer() {
           <button onClick={() => router.push("/")}>Tweeter</button>
         </div>
       </div>
-    </div >
+    </div>
   );
 }

@@ -1,7 +1,6 @@
-import React from "react";
-import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import React, { Fragment, useState } from "react";
 import Modal from "./Modal";
 
 import { useRouter } from "next/router";
@@ -29,7 +28,7 @@ export default function Header() {
       >
         <div className="flex lg:flex-1 ">
           <button
-            className="-m-1.5 p-1.5 flex flex-col lg:flex-row lg:items-center "
+            className="-m-1.5 p-1.5 flex flex-col lg:flex-row lg:items-center"
             onClick={() => router.push("/home")}
           >
             <img

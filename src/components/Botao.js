@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-
-export default function Button({close, open, corClose, corOpen}) {
+export default function Button({ close, open, corClose, corOpen }) {
   const [changeButton, setChangeButton] = useState(true);
   return (
     <button

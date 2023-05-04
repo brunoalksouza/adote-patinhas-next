@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import CustomHead from "@/components/CustomHead";
 import Filter from "@/components/Filter";
 import Footer from "@/components/Footer";
 import LabelPage from "@/components/LabelPage";
@@ -180,6 +181,8 @@ const registeredAnimals = [
 export default function Home() {
   return (
     <>
+      <CustomHead title="Home" />
+
       <Navbar />
       <Filter />
       <div className="bg-[#A5C282] pt-4">

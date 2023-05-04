@@ -1,10 +1,8 @@
-import { Inter } from 'next/font/google'
-import Login from './login'
+import { Inter } from "next/font/google";
+import Login from "./login";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return (
-    <Login/>
-  )
+  return <Login title="Login" />;
 }

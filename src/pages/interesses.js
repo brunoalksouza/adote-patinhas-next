@@ -1,7 +1,8 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Card from "@/components/Card";
+import CustomHead from "@/components/CustomHead";
+import Footer from "@/components/Footer";
 import LabelPage from "@/components/LabelPage";
+import Navbar from "@/components/Navbar";
 
 const favoriteAnimals = [
   {
@@ -126,10 +127,17 @@ const favoriteAnimals = [
 export default function Interesses() {
   return (
     <>
+      <CustomHead title="Meus Interesses" />
       <Navbar />
       <div className="bg-[#A5C282] pt-4">
         <LabelPage titlePage="INTERESSES" />
-      <Card animals={favoriteAnimals} close="remover interesse" open="voltar interesse" corClose="#5A3938" corOpen="#516953"/>
+        <Card
+          animals={favoriteAnimals}
+          close="remover interesse"
+          open="voltar interesse"
+          corClose="#5A3938"
+          corOpen="#516953"
+        />
       </div>
       <Footer />
     </>

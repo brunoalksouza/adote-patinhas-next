@@ -1,5 +1,6 @@
 import AnimalsUser from "@/components/AnimalsUser";
 import CardUser from "@/components/CardUser";
+import CustomHead from "@/components/CustomHead";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
@@ -190,6 +191,7 @@ const animals = [
 export default function Perfil() {
   return (
     <>
+      <CustomHead title="Perfil" />
       <Navbar />
       <div className="bg-[#A5C282]">
         <div className="bg-[#A5C282] items-center mx-auto flex max-w-7xl flex-col sm:flex-row  sm:justify-between ">

@@ -1,10 +1,10 @@
 import CustomHead from "@/components/CustomHead";
 import LoginForm from "@/components/LoginForm";
 
-export default function Login({ title }) {
+export default function Login() {
   return (
     <>
-      <CustomHead title={title} />
+      <CustomHead title="Login" />
       <div className="bg-[#516953]">
         <div className="lg:flex justify-center h-screen">
           <div

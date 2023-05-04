@@ -4,5 +4,5 @@ import Login from "./login";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <Login title="Login" />;
+  return <Login />;
 }
